@@ -1,0 +1,18 @@
+# Package up the contents of the local "example_root" directory.
+# sh build-pkg.sh manifest_template.example example_root
+
+cat << EOF
+name:          my-fortune
+version:       20140624
+origin:        local/myfortune
+comment:       My one and only fortune
+arch:          freebsd:10:x86:64
+www:           n/a
+maintainer:    my_addy@example.com
+prefix:        /
+licenselogic:  single
+licenses:      [BSD]
+flatsize:      ${DIR_SIZE}
+desc:          Package that installs a fortune into /usr/local/test/fortune
+categories:    [local]
+EOF
